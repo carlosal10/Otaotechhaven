@@ -1,0 +1,219 @@
+body{
+    background-image:url("Otao logo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+img{
+    float: left;
+    float: right;
+    border-image: 20px;
+    margin-right: 20px;
+    image-orientation: flip;
+}
+h1 {
+    color: #f4f6f8;
+    border-radius: 30px;
+    border-width: 10px;
+    padding: 20px;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.container{
+    width: 100%;
+    height: 10vh;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    
+}
+form{
+    width: 500px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+}
+form input{
+    flex: 1;
+    border: 50px;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgb(105, 228, 94);
+    outline: 10px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 150px #092beb, 0 0 100px #092beb, 0 0 200px #092beb;
+
+}
+form button{
+    background: rgb(16, 3, 196);
+    padding: 10px 20px;
+    border: 50px;
+    border-radius: 40px;
+    outline: none;
+    color: bisque;
+    letter-spacing: 1px;
+    cursor: pointer;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 150px #092beb, 0 0 100px #092beb, 0 0 200px #092beb;
+}
+
+#apple,
+#twitter,
+#github,
+#facebook {
+   font-size: 1em;
+   background-color: #0438a0;
+   color: #fff;
+   box-shadow: 2px 2px 2px #00000080, 10px 1px 12 #00000080,
+   2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, 
+   inset 2px 2px 10px, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+   border-radius: 29px;
+   padding: 11px 19px;
+   margin: 0 40px;
+   animation: animate 3s linear infinite;
+   text-shadow: 0 0 150px #092beb, 0 0 100px #092beb, 0 0 200px #092beb;
+}
+ 
+#twitter {
+    animation-delay: 0.3s;
+
+}
+
+#facebook {
+    animation-delay: 0.7s;
+}
+
+#github {
+    animation-delay: 0.1s;
+
+}
+ @keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+ }
+ #box1{
+    color: bisque;
+    background-color: black;
+    border: 5px;
+    border-radius: 20px;
+    width: 700px;
+    height: 300px;
+    font-size: 18px;
+    margin: 20px;
+
+ }
+ #box2{
+    color:  beige;
+    justify-content: space-around;
+    display: flexbox;
+    border: 5px;
+    border-radius: 20px;
+    width: 1000px;
+    height: 500;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    background-repeat: no-repeat;
+    margin: 20px;
+
+ }
+ h3{
+    color: rgb(28, 245, 8);
+ }
+nav{
+    display: flex;
+    border-radius: 50px;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8hv;
+    background-color: darkgray;
+
+}
+.logo{
+    color: rgb(4, 59, 68);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(163, 240, 8);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.nav-links a:hover{
+    color: orange;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(70, 2, 2);
+    margin: 5px;
+}
+@media screen and (max-width:1020px){
+    .nav-links{width: 60%;
+
+    }
+}
+
+@media screen and (max-width:1020px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 93vh;
+        top: 9vh;
+        background-color: darkslategray;
+        display: -webkit-flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+}
+.nav-links li{
+    opacity: 100%;
+}
+.burger{
+    display: block;
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
